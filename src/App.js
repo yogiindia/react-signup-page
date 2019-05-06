@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Input from './components/Input';
+import TooltipContent from './components/Input/TooltipContent';
 
 import './App.css';
 

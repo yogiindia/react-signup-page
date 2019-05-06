@@ -55,3 +55,22 @@
 .toggler__hide {
     display: none;
 }
+
+.container {
+    width: 250px;
+}
+
+.tooltip__header {
+    margin: 6px 0;
+}
+.tooltip__list {
+    margin: 5px 0 5px 0;
+    padding: 0 15px;
+    list-style-type: none;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.tooltip__list li > svg {
+    margin-right: 10px;
+}
