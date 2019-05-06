@@ -61,7 +61,14 @@ function Input({ isSecure = false, ...props }) {
     const onChangeHandler = e => {
         const value = e.target.value;
 
-        if (value && e.target.type === 'password') {
+        if (e.target.type === 'password') {
+            if (!value) {
+                sethaveUpperCase(false);
+                sethaveMinLength(false);
+                setHaveNumber(false);
+                sethaveLowerCase(false);
+                return;
+            }
             if (checkMinLength(value)) {
                 sethaveMinLength(true);
             } else {
@@ -103,7 +110,7 @@ function Input({ isSecure = false, ...props }) {
                         />
                     }
                     trigger="click"
-                    position="left"
+                    position="bottom"
                     disabled={!isSecure}
                     arrow={true}
                     title="Your Password must contain:"
