@@ -82,12 +82,34 @@
     align-items: center;
 }
 
-.progressbar-container {
+.progress__container {
     flex: 3;
+    background-color: #191919;
 }
 
 .strength__string {
     flex: 1;
     margin: 0;
     font-size: 14px;
+    text-transform: capitalize;
+}
+
+.weak {
+    color: #f44336;
+}
+
+.average {
+    color: #d35400;
+}
+
+.fair {
+    color: #8bc34a;
+}
+
+.good {
+    color: #27ae60;
+}
+
+.excellent {
+    color: #009432;
 }

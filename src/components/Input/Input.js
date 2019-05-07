@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
 import 'react-tippy/dist/tippy.css';
 import { Tooltip } from 'react-tippy';
+import PasswordChecker from 'pw-checker';
 
 import TooltipContent from './TooltipContent';
 
@@ -13,6 +14,7 @@ function Input({ isSecure = false, ...props }) {
     const [haveUpperCase, sethaveUpperCase] = useState(false);
     const [haveLowerCase, sethaveLowerCase] = useState(false);
     const [haveMinLength, sethaveMinLength] = useState(false);
+    const [strength, setStrength] = useState(0);
 
     const inputEl = useRef(null);
 
@@ -58,7 +60,7 @@ function Input({ isSecure = false, ...props }) {
             inputEl.current.type === 'text' ? 'password' : 'text';
     };
 
-    const onChangeHandler = e => {
+    const onChangeHandler = async e => {
         const value = e.target.value;
 
         if (e.target.type === 'password') {
@@ -67,8 +69,13 @@ function Input({ isSecure = false, ...props }) {
                 sethaveMinLength(false);
                 setHaveNumber(false);
                 sethaveLowerCase(false);
+                setStrength(0);
                 return;
             }
+
+            const strength = await PasswordChecker.check(value);
+            setStrength((strength + 1) * 20);
+
             if (checkMinLength(value)) {
                 sethaveMinLength(true);
             } else {
@@ -107,9 +114,10 @@ function Input({ isSecure = false, ...props }) {
                             haveMinLength={haveMinLength}
                             haveNumber={haveNumber}
                             haveUpperCase={haveUpperCase}
+                            strength={strength}
                         />
                     }
-                    trigger="click"
+                    trigger="focus"
                     position="bottom"
                     disabled={!isSecure}
                     arrow={true}

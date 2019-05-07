@@ -7,8 +7,31 @@ function TooltipContent({
     haveNumber = false,
     haveUpperCase = false,
     haveMinLength = false,
-    haveLowerCase = false
+    haveLowerCase = false,
+    strength = 0
 }) {
+    const strengthString = {
+        0: '',
+        20: 'weak',
+        40: 'average',
+        60: 'fair',
+        80: 'good',
+        100: 'excellent'
+    };
+
+    const strengthColor = {
+        0: '',
+        20: '#F44336',
+        40: '#d35400',
+        60: '#8BC34A',
+        80: '#27ae60',
+        100: '#009432'
+    };
+
+    console.log(strength);
+
+    const strengthClass = `strength__string ${strengthString[strength]}`;
+
     return (
         <div className="container">
             <header className="tooltip__header">
@@ -32,8 +55,16 @@ function TooltipContent({
                 </li>
             </ul>
             <div className="strength__meter">
-                <Progress completed={100} />
-                <span className="strength__string">Excellent</span>
+                <div className="progress__container">
+                    <Progress
+                        completed={strength}
+                        color={strengthColor[strength]}
+                    />
+                </div>
+
+                <span className={strengthClass}>
+                    {strengthString[strength]}
+                </span>
             </div>
         </div>
     );
