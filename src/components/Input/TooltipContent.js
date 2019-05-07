@@ -1,4 +1,5 @@
 import React from 'react';
+import Progress from 'react-progressbar';
 import ValidateTooltip from './ValidateTooltip';
 import './style.css';
 
@@ -30,6 +31,10 @@ function TooltipContent({
                     letter
                 </li>
             </ul>
+            <div className="strength__meter">
+                <Progress completed={100} />
+                <span className="strength__string">Excellent</span>
+            </div>
         </div>
     );
 }

@@ -57,7 +57,7 @@
 }
 
 .container {
-    width: 250px;
+    width: 300px;
 }
 
 .tooltip__header {
@@ -65,7 +65,7 @@
 }
 .tooltip__list {
     margin: 5px 0 5px 0;
-    padding: 0 15px;
+    padding: 0;
     list-style-type: none;
     text-align: left;
     line-height: 1.5em;
@@ -73,4 +73,21 @@
 
 .tooltip__list li > svg {
     margin-right: 10px;
+}
+
+.strength__meter {
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    align-items: center;
+}
+
+.progressbar-container {
+    flex: 3;
+}
+
+.strength__string {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
 }
