@@ -117,8 +117,8 @@ function Input({ isSecure = false, ...props }) {
                             strength={strength}
                         />
                     }
-                    trigger="focus"
-                    position="bottom"
+                    trigger="click"
+                    position="left"
                     disabled={!isSecure}
                     arrow={true}
                     title="Your Password must contain:"
