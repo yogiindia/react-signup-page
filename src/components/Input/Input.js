@@ -10,6 +10,7 @@ import './style.css';
 
 function Input({ isSecure = false, ...props }) {
     const [isVisible, setVisible] = useState(true);
+    const [showTooltip, setShowTooltip] = useState(false);
     const [haveNumber, setHaveNumber] = useState(false);
     const [haveUpperCase, sethaveUpperCase] = useState(false);
     const [haveLowerCase, sethaveLowerCase] = useState(false);
@@ -58,6 +59,16 @@ function Input({ isSecure = false, ...props }) {
         setVisible(!isVisible);
         inputEl.current.type =
             inputEl.current.type === 'text' ? 'password' : 'text';
+    };
+
+    const onFocusHandler = e => {
+        if (e.target.type === 'password') {
+            setShowTooltip(true);
+        }
+    };
+
+    const onBlurHandler = e => {
+        setShowTooltip(false);
     };
 
     const onChangeHandler = async e => {
@@ -117,7 +128,8 @@ function Input({ isSecure = false, ...props }) {
                             strength={strength}
                         />
                     }
-                    trigger="click"
+                    open={showTooltip}
+                    trigger="manual"
                     position="left"
                     disabled={!isSecure}
                     arrow={true}
@@ -129,6 +141,8 @@ function Input({ isSecure = false, ...props }) {
                         type={type}
                         className="input__element"
                         onChange={onChangeHandler}
+                        onFocus={onFocusHandler}
+                        onBlur={onBlurHandler}
                     />
                 </Tooltip>
                 {isSecure && (
