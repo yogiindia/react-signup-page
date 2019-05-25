@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.88197e76.chunk.css",
-    "main.js": "/static/js/main.41366b11.chunk.js",
-    "main.js.map": "/static/js/main.41366b11.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.4c9116bc.chunk.css": "/static/css/2.4c9116bc.chunk.css",
-    "static/js/2.c75ecacb.chunk.js": "/static/js/2.c75ecacb.chunk.js",
-    "static/js/2.c75ecacb.chunk.js.map": "/static/js/2.c75ecacb.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.5ebcb5ebba78ca3ba54fe0f98f1fdd86.js": "/precache-manifest.5ebcb5ebba78ca3ba54fe0f98f1fdd86.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.4c9116bc.chunk.css.map": "/static/css/2.4c9116bc.chunk.css.map",
-    "static/css/main.88197e76.chunk.css.map": "/static/css/main.88197e76.chunk.css.map"
+    "main.css": "/react-signup-page/static/css/main.88197e76.chunk.css",
+    "main.js": "/react-signup-page/static/js/main.a88ada7c.chunk.js",
+    "main.js.map": "/react-signup-page/static/js/main.a88ada7c.chunk.js.map",
+    "runtime~main.js": "/react-signup-page/static/js/runtime~main.2c6a40ae.js",
+    "runtime~main.js.map": "/react-signup-page/static/js/runtime~main.2c6a40ae.js.map",
+    "static/css/2.4c9116bc.chunk.css": "/react-signup-page/static/css/2.4c9116bc.chunk.css",
+    "static/js/2.c75ecacb.chunk.js": "/react-signup-page/static/js/2.c75ecacb.chunk.js",
+    "static/js/2.c75ecacb.chunk.js.map": "/react-signup-page/static/js/2.c75ecacb.chunk.js.map",
+    "index.html": "/react-signup-page/index.html",
+    "precache-manifest.78c3e6186703dc4aeb965dff9ad1e56a.js": "/react-signup-page/precache-manifest.78c3e6186703dc4aeb965dff9ad1e56a.js",
+    "service-worker.js": "/react-signup-page/service-worker.js",
+    "static/css/2.4c9116bc.chunk.css.map": "/react-signup-page/static/css/2.4c9116bc.chunk.css.map",
+    "static/css/main.88197e76.chunk.css.map": "/react-signup-page/static/css/main.88197e76.chunk.css.map"
   }
 }
